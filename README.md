@@ -2,7 +2,7 @@
 
 # YaneuraOu-cmake
 
-Cmake files to build YaneuraOu.
+Cmake files to build [YaneuraOu](https://github.com/yaneurao/YaneuraOu).
 
 ## Usage
 
@@ -21,7 +21,7 @@ Your engine can include `YaneuraOu` headers like
 
 ## Example
 
-Build tanuki solver with `CmakeLists.txt`
+Build [tanuki solver](https://github.com/yaneurao/YaneuraOu/blob/master/source/engine/tanuki-mate-engine/tanuki-mate-search.cpp) with `CmakeLists.txt`
 
 ```cmake
 cmake_minimum_required(VERSION 3.16)
