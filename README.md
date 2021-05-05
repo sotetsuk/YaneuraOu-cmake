@@ -30,10 +30,10 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D NO_SSE")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D TANUKI_MATE_ENGINE")
 
+# download YaneuraOu using FetchContent
 include(FetchContent)
 set(FETCHCONTENT_QUIET OFF)
 set(FETCHCONTENT_UPDATES_DISCONNECTED ON)
-
 fetchcontent_declare(
   YaneuraOu
   GIT_REPOSITORY https://github.com/sotetsuk/YaneuraOu-cmake
@@ -41,6 +41,7 @@ fetchcontent_declare(
 )
 fetchcontent_makeavailable(YaneuraOu)
 
+# build tanuki solver
 add_executable(
   tanuki
   tanuki-mate-search.cpp
