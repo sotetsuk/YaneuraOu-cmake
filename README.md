@@ -2,7 +2,7 @@
 
 # YaneuraOu-cmake
 
-Cmake files to build [YaneuraOu](https://github.com/yaneurao/YaneuraOu).
+Utility to build [YaneuraOu](https://github.com/yaneurao/YaneuraOu) with cmake
 
 ## Usage
 
