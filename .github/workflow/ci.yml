@@ -1,0 +1,18 @@
+name: ci
+
+on: [push]
+
+jobs:
+  build-ubuntu:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout own repository
+        uses: actions/checkout@v2
+
+      - name: install g++-10
+        run: |
+          sudo apt update
+          sudo apt install build-essential libopenblas-dev g++-10
+      - name: build
+        run: |
+          mkdir build && cd build && cmake .. -DCMAKE_CXX_FLAGS="-DYANEURAOU_ENGINE_NNUE" && make -j
