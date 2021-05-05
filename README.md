@@ -2,11 +2,11 @@
 
 # YaneuraOu-cmake
 
-Utility to build [YaneuraOu](https://github.com/yaneurao/YaneuraOu) with cmake
+Utility to build [YaneuraOu](https://github.com/yaneurao/YaneuraOu) with `Cmake`
 
 ## Usage
 
-Link `YaneuraOu` lib in your CmakeLists.txt like 
+Link `YaneuraOu` lib in your `CmakeLists.txt` like 
 
 ```cmake
 target_link_libraries(YOUR_ENGINE PUBLIC YaneuraOu)
