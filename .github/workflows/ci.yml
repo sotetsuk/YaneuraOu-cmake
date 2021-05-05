@@ -15,4 +15,5 @@ jobs:
           sudo apt install build-essential libopenblas-dev g++-10
       - name: build
         run: |
+          git submodule update --init
           mkdir build && cd build && cmake .. -DCMAKE_CXX_FLAGS="-DYANEURAOU_ENGINE_NNUE" && make -j
