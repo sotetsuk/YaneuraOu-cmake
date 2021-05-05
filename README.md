@@ -52,3 +52,7 @@ target_include_directories(
   ${YaneuraOu_SOURCE_DIR}/include
 )
 ```
+
+## LICENSE
+
+MIT
