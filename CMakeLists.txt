@@ -68,13 +68,15 @@ include_directories(YaneuraOu/source/extra)
 include_directories(YaneuraOu/source/learn)
 include_directories(YaneuraOu/source/mate)
 
+add_library(YaneuraOu STATIC ${YANEURAOU_ENGINE_BASE})
+
 add_executable(
   tanuki
-  ${YANEURAOU_ENGINE_BASE}
   YaneuraOu/source/engine/tanuki-mate-engine/tanuki-mate-search.cpp
 )
+target_link_libraries(tanuki PUBLIC YaneuraOu)
 
 # link pthread
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
-target_link_libraries(tanuki PUBLIC "-pthread")
+target_link_libraries(YaneuraOu PUBLIC "-pthread")
