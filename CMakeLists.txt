@@ -4,13 +4,20 @@ project(YaneuraOu)
 set(CMAKE_CXX_STANDARD 14)
 file(
   GLOB YANEURAOU_ENGINE_BASE
-  include/YaneuraOu/source/book/**.h YaneuraOu/source/book/**.cpp
-  include/YaneuraOu/source/eval/**.h YaneuraOu/source/eval/**.cpp
-  include/YaneuraOu/source/extra/**.h YaneuraOu/source/extra/**.cpp
-  include/YaneuraOu/source/learn/**.h YaneuraOu/source/learn/**.cpp
-  include/YaneuraOu/source/mate/**.h YaneuraOu/source/mate/**.cpp
-  include/YaneuraOu/source/testcmd/**.h YaneuraOu/source/testcmd/**.cpp
-  include/YaneuraOu/source/*.h YaneuraOu/source/**.cpp
+  include/YaneuraOu/source/book/**.h
+  include/YaneuraOu/source/book/**.cpp
+  include/YaneuraOu/source/eval/**.h
+  include/YaneuraOu/source/eval/**.cpp
+  include/YaneuraOu/source/extra/**.h
+  include/YaneuraOu/source/extra/**.cpp
+  include/YaneuraOu/source/learn/**.h
+  include/YaneuraOu/source/learn/**.cpp
+  include/YaneuraOu/source/mate/**.h
+  include/YaneuraOu/source/mate/**.cpp
+  include/YaneuraOu/source/testcmd/**.h
+  include/YaneuraOu/source/testcmd/**.cpp
+  include/YaneuraOu/source/*.h
+  include/YaneuraOu/source/**.cpp
 )
 include_directories(include/YaneuraOu/source)
 include_directories(include/YaneuraOu/source/book)
