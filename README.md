@@ -2,7 +2,7 @@
 
 # YaneuraOu-cmake
 
-Utility to build [YaneuraOu](https://github.com/yaneurao/YaneuraOu) with `Cmake`
+Utility to build [YaneuraOu](https://github.com/yaneurao/YaneuraOu) as static library using Cmake
 
 ## Usage
 
