@@ -2,8 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(YaneuraOu)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D NO_SSE")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D TANUKI_MATE_ENGINE")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D YANEURAOU_ENGINE_NNUE")
 file(
   GLOB YANEURAOU_ENGINE_BASE
   YaneuraOu/source/book/**.h YaneuraOu/source/book/**.cpp
@@ -22,12 +21,6 @@ include_directories(YaneuraOu/source/learn)
 include_directories(YaneuraOu/source/mate)
 
 add_library(YaneuraOu STATIC ${YANEURAOU_ENGINE_BASE})
-
-add_executable(
-  tanuki
-  YaneuraOu/source/engine/tanuki-mate-engine/tanuki-mate-search.cpp
-)
-target_link_libraries(tanuki PUBLIC YaneuraOu)
 
 # link pthread
 set(THREADS_PREFER_PTHREAD_FLAG ON)
