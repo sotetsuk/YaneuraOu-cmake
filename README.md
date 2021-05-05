@@ -6,14 +6,13 @@ Utility to build [YaneuraOu](https://github.com/yaneurao/YaneuraOu) with cmake
 
 ## Usage
 
-Link and include `YaneuraOu` lib in your CmakeLists.txt like 
+Link `YaneuraOu` lib in your CmakeLists.txt like 
 
 ```cmake
 target_link_libraries(YOUR_ENGINE PUBLIC YaneuraOu)
-target_include_directories(YOUR_ENGINE PUBLIC ${YaneuraOu_SOURCE_DIR}/include)
 ```
 
-Your engine can include `YaneuraOu` headers like
+Then, your engine can include `YaneuraOu` headers like
 
 ```cpp
 #include "YaneuraOu/extra/all.h"
@@ -47,10 +46,6 @@ add_executable(
   tanuki-mate-search.cpp
 )
 target_link_libraries(tanuki PUBLIC YaneuraOu)
-target_include_directories(
-  tanuki PUBLIC
-  ${YaneuraOu_SOURCE_DIR}/include
-)
 ```
 
 ## LICENSE
