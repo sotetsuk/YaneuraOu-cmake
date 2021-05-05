@@ -19,14 +19,13 @@ file(
   include/YaneuraOu/*.h
   include/YaneuraOu/**.cpp
 )
-include_directories(include/YaneuraOu)
-include_directories(include/YaneuraOu/book)
-include_directories(include/YaneuraOu/eval)
-include_directories(include/YaneuraOu/extra)
-include_directories(include/YaneuraOu/learn)
-include_directories(include/YaneuraOu/mate)
-
 add_library(YaneuraOu STATIC ${YANEURAOU_ENGINE_BASE})
+target_include_directories(YaneuraOu PUBLIC include/YaneuraOu)
+target_include_directories(YaneuraOu PUBLIC include/YaneuraOu/book)
+target_include_directories(YaneuraOu PUBLIC include/YaneuraOu/eval)
+target_include_directories(YaneuraOu PUBLIC include/YaneuraOu/extra)
+target_include_directories(YaneuraOu PUBLIC include/YaneuraOu/learn)
+target_include_directories(YaneuraOu PUBLIC include/YaneuraOu/mate)
 
 # link pthread
 set(THREADS_PREFER_PTHREAD_FLAG ON)
