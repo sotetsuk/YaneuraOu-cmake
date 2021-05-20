@@ -4,29 +4,23 @@ project(YaneuraOu)
 set(CMAKE_CXX_STANDARD 14)
 file(
   GLOB YANEURAOU_ENGINE_BASE
-  include/YaneuraOu/book/**.h
-  include/YaneuraOu/book/**.cpp
-  include/YaneuraOu/eval/**.h
-  include/YaneuraOu/eval/**.cpp
-  include/YaneuraOu/extra/**.h
-  include/YaneuraOu/extra/**.cpp
-  include/YaneuraOu/learn/**.h
-  include/YaneuraOu/learn/**.cpp
-  include/YaneuraOu/mate/**.h
-  include/YaneuraOu/mate/**.cpp
-  include/YaneuraOu/testcmd/**.h
-  include/YaneuraOu/testcmd/**.cpp
-  include/YaneuraOu/*.h
-  include/YaneuraOu/**.cpp
+  YaneuraOu/source/book/**.h
+  YaneuraOu/source/book/**.cpp
+  YaneuraOu/source/eval/**.h
+  YaneuraOu/source/eval/**.cpp
+  YaneuraOu/source/extra/**.h
+  YaneuraOu/source/extra/**.cpp
+  YaneuraOu/source/learn/**.h
+  YaneuraOu/source/learn/**.cpp
+  YaneuraOu/source/mate/**.h
+  YaneuraOu/source/mate/**.cpp
+  YaneuraOu/source/testcmd/**.h
+  YaneuraOu/source/testcmd/**.cpp
+  YaneuraOu/source/*.h
+  YaneuraOu/source/**.cpp
 )
 add_library(YaneuraOu STATIC ${YANEURAOU_ENGINE_BASE})
-target_include_directories(YaneuraOu PRIVATE include/YaneuraOu)
-target_include_directories(YaneuraOu PRIVATE include/YaneuraOu/book)
-target_include_directories(YaneuraOu PRIVATE include/YaneuraOu/eval)
-target_include_directories(YaneuraOu PRIVATE include/YaneuraOu/extra)
-target_include_directories(YaneuraOu PRIVATE include/YaneuraOu/learn)
-target_include_directories(YaneuraOu PRIVATE include/YaneuraOu/mate)
-target_include_directories(YaneuraOu PUBLIC include)
+target_include_directories(YaneuraOu PUBLIC .)
 
 # link pthread
 set(THREADS_PREFER_PTHREAD_FLAG ON)
