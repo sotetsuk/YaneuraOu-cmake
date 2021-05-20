@@ -15,7 +15,7 @@ target_link_libraries(YOUR_ENGINE PUBLIC YaneuraOu)
 Then, your engine can include `YaneuraOu` headers like
 
 ```cpp
-#include "YaneuraOu/extra/all.h"
+#include "YaneuraOu/source/extra/all.h"
 ```
 
 ## Example
